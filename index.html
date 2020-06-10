@@ -6,10 +6,10 @@
     <title>Barbershop</title>
 </head>
 <body>
-    <header class="main__header">
-        <nav class="main__navigation">
-            <a href="#" class="main__header_logo"><img src="img/index-logo.svg" width="368" height="200" alt="Логотип барбершопа «Бородинский»"></a>
-            <ul class="site__navigation">
+    <header class="main-header">
+        <nav class="main-navigation">
+            <a href="#" class="main-header__logo"><img src="img/index-logo.svg" width="368" height="200" alt="Логотип барбершопа «Бородинский»"></a>
+            <ul class="site-navigation">
                 <li><a href="info.html">Информация</a></li>
                 <li><a href="news.html">Новости</a></li>
                 <li><a href="price.html">Прайс-лиcт</a></li>
@@ -17,7 +17,7 @@
                 <li><a href="contact.html">Контакты</a></li>
             </ul>
         </nav>
-        <ul class="user__navigation">
+        <ul class="user-navigation">
             <li class="login__link">Вход</li>
         </ul>
     </header>
@@ -53,9 +53,9 @@
                 <li class="news__item">
                     <p>В нашей команде пополнение, борис «бритва» стригунец, обладaтель множества титулов и наград пополнил наши стройные ряды.</p>
                     <time datetime="2019-01-18">18 января</time>
-                </li>
-                <a href="news.html">Все новости</a>
+                </li>                
             </ul>
+            <a href="news.html">Все новости</a>
         </section>
 
         <section class="gallery"> <!-- Секция Галерея -->
@@ -63,8 +63,8 @@
             <figure class="gallery__content">
                 <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
             </figure>
-            <span class="button gallery__button gallery__button_back" type="button">Назад</span>
-            <span class="button gallery__button gallery__button_next" type="button">Вперед</span>
+            <button class="button gallery__button gallery__button_back" type="button">Назад</button>
+            <button class="button gallery__button gallery__button_next" type="button">Вперед</button>
         </section>
 
         <section class="contacts"> <!-- Cекция Контакты -->
@@ -82,7 +82,7 @@
             <a href="contacts.html">Обратная связь</a>
         </section>
 
-        <section class="appoinment">
+        <section class="appoinment"> <!-- Секция записаться -->
             <h2>Записаться</h2>
             <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
             <!-- Здесь будет форма -->
@@ -102,8 +102,48 @@
                 <button type="submit">Отправить</button>
             </form> -->
         </section>
-
     </main>
 
+    <footer class="main-footer">
+        <p class="footer-contacts">
+            Барбершоп «Бородинский»<br>
+            Адрес: г. Санкт-Петербург, ул. б. Конюшенная, д. 19/8<br>
+            <a href="map.html">Как нас найти?
+            </a><br>
+            Телефон: +7 (495) 666-02-66
+        </p>
+        <div class="footer-social">
+            <b>ДАВАЙТЕ ДРУЖИТЬ!</b>
+            <ul>
+                <li><a href="#"><img src="img/vk.svg" alt="В Контакте"></a></li>
+                <li><a href="#"><img src="img/facebook.svg" alt="Фейсбук"></a></li>
+                <li><a href="#"><img src="img/instagram.svg" alt="Инстаграмм"></a></li>
+            </ul>
+        </div>
+        <p class="footer-copyright">
+            <b>Разработано</b>
+            <a href="https://htmlacademy.ru/">Html academy</a>
+        </p>
+    </footer>
+
+    <section class="modal modal-login">
+        <h2>Личный кабинет</h2>
+        <p>Введите свой логин и пароль.</p>
+        <!-- Здесь будет форма -->
+        <input name="login" type="text" placeholder="Логин">
+        <img src="img/user.svg" alt="user icon">
+        <input name="password" type="text" placeholder="Пароль">
+        <img src="img/lock.svg" alt="lock icon">
+        <label>
+            <input type="checkbox">Запомните меня
+        </label>
+        <a href="#">Я забыл пароль!</a>
+        <button type="button">Войти</button>
+    </section>
+
+    <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <button class="modal-close"></button>
+    </section>
 </body>
 </html>
