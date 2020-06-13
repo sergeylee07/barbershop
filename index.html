@@ -18,7 +18,9 @@
             </ul>
         </nav>
         <ul class="user-navigation">
-            <li class="login-link">Вход</li>
+            <li class="login-link">
+                <a class="login-link" href="login.html">Вход</a>
+            </li>
         </ul>
     </header>
 
@@ -86,21 +88,25 @@
             <h2>Записаться</h2>
             <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
             <!-- Здесь будет форма -->
-            <!-- <form class="appoinment__form" action="#">
-                <label>Дата
-                    <input name="date" type="date">
-                </label>
-                <label>Время
-                    <input name="time"  type="time">
-                </label>
-                <label>Ваше имя
-                    <input name="name" placeholder="Ваше имя" type="text">
-                </label>
-                <label>Телефон
-                    <input name="phone" placeholder="Телефон" type="number">
-                </label>
-                <button type="submit">Отправить</button>
-            </form> -->
+            <form class="appoinment__form" action="#" method="POST">
+                <p class="appoitment__item">
+                    <label for="appoinment__date">Дата</label>
+                    <input id="appoinment__date" name="date" type="text" placeholder="08.10.2017" value="">
+                </p>
+                <p class="appoitment__item">
+                    <label for="appoinment__time">Время</label>
+                    <input id="appoinment__time" name="time"  type="text" placeholder="10:00" value="">
+                </p>
+                <p class="appoitment__item"></p>
+                    <label for="appoinment__name">Ваше имя</label>
+                    <input id="appoinment__name" name="name"  type="text" placeholder="Ваше имя" value="">
+                </p>
+                <p class="appoitment__item"></p>
+                    <label for="appoinment__phone">Телефон</label>
+                    <input id="appoinment__phone" name="phone" type="tel" placeholder="+7 800 000-00-00" value="">
+                </p>                
+                <button class="button" type="submit">Отправить</button>
+            </form>
         </section>
     </main>
 
@@ -130,20 +136,36 @@
         <h2>Личный кабинет</h2>
         <p>Введите свой логин и пароль.</p>
         <!-- Здесь будет форма -->
-        <input name="login" type="text" placeholder="Логин">
-        <img src="img/user.svg" alt="user icon">
-        <input name="password" type="text" placeholder="Пароль">
-        <img src="img/lock.svg" alt="lock icon">
-        <label>
-            <input type="checkbox">Запомните меня
-        </label>
-        <a href="#">Я забыл пароль!</a>
-        <button type="button">Войти</button>
+        <form class="login-form" action="#" method="POST">
+            <p>
+                <label class="visually-hidden" for="user-login">Логин</label>
+                <input class="login-icon-user" id="user-login" name="login" type="text" placeholder="Логин">
+                <!-- <img src="img/user.svg" alt="user icon"> -->
+            </p>
+            <p>
+                <label class="visually-hidden" for="user-passwords">Пароль</label>
+                <input class="ligon-icon-password" id="user-passwords" name="password" type="password" placeholder="Пароль">
+                <!-- <img src="img/lock.svg" alt="lock icon"> -->
+            </p>
+            <p class="login-passwords-info">
+                <input class="visually-hidden" name="remeber"" id="login-passwords-info" type="checkbox" >
+                <label for="login-passwords-info">
+                    <span class="checkbox-indicator"></span>
+                    Запомните меня
+                </label>
+            </p>            
+            <a class="restore" href="#">Я забыл пароль!</a>
+            <button class="button" type="submit">Войти</button>            
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map"> <!-- Найти на карте -->
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <button class="modal-close"></button>
+        <p>
+            <img src="img/map.jpg" width="788" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
+        <button class="modal-close" type="button">Закрыть</button>
     </section>
 </body>
 </html>
