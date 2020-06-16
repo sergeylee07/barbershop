@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbershop</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="main-header">
@@ -45,69 +47,73 @@
             </ul>
         </section>
 
-        <section class="news"> <!-- Секция Новости -->
-            <h2>Новости</h2>
-            <ul class="news__list">
-                <li class="news__item">
-                    <p>Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки,</p>
-                    <time datetime="2019-01-11">11 января</time>
-                </li>
-                <li class="news__item">
-                    <p>В нашей команде пополнение, борис «бритва» стригунец, обладaтель множества титулов и наград пополнил наши стройные ряды.</p>
-                    <time datetime="2019-01-18">18 января</time>
-                </li>                
-            </ul>
-            <a href="news.html">Все новости</a>
-        </section>
+        <div class="index-columns">
+            <section class="news"> <!-- Секция Новости -->
+                <h2>Новости</h2>
+                <ul class="news__list">
+                    <li class="news__item">
+                        <p>Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки,</p>
+                        <time datetime="2019-01-11">11 января</time>
+                    </li>
+                    <li class="news__item">
+                        <p>В нашей команде пополнение, борис «бритва» стригунец, обладaтель множества титулов и наград пополнил наши стройные ряды.</p>
+                        <time datetime="2019-01-18">18 января</time>
+                    </li>                
+                </ul>
+                <a href="news.html">Все новости</a>
+            </section>
+    
+            <section class="gallery"> <!-- Секция Галерея -->
+                <h2>Фотогалерея</h2>
+                <figure class="gallery__content">
+                    <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
+                </figure>
+                <button class="button gallery__button gallery__button_back" type="button">Назад</button>
+                <button class="button gallery__button gallery__button_next" type="button">Вперед</button>
+            </section>
+        </div>
 
-        <section class="gallery"> <!-- Секция Галерея -->
-            <h2>Фотогалерея</h2>
-            <figure class="gallery__content">
-                <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
-            </figure>
-            <button class="button gallery__button gallery__button_back" type="button">Назад</button>
-            <button class="button gallery__button gallery__button_next" type="button">Вперед</button>
-        </section>
-
-        <section class="contacts"> <!-- Cекция Контакты -->
-            <h2>Контактная информация</h2>
-            <p>
-                Барбершоп «Бородинский»<br>
-                Адрес: г. Санкт-Петербург, б. Конюшенная, д. 19/8<br>
-                Телефон: +7 (495) 666-02-66
-            </p>
-            <p>Время работы:<br> 
-                Пн—Пт: с 10:00 до 22:00<br>
-                Сб—Вс: с 10:00 до 19:00
-            </p>            
-            <a href="map.html">Как проехать</a>
-            <a href="contacts.html">Обратная связь</a>
-        </section>
-
-        <section class="appoinment"> <!-- Секция записаться -->
-            <h2>Записаться</h2>
-            <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-            <!-- Здесь будет форма -->
-            <form class="appoinment__form" action="#" method="POST">
-                <p class="appoitment__item">
-                    <label for="appoinment__date">Дата</label>
-                    <input id="appoinment__date" name="date" type="text" placeholder="08.10.2017" value="">
+        <div class="index-columns">
+            <section class="contacts"> <!-- Cекция Контакты -->
+                <h2>Контактная информация</h2>
+                <p>
+                    Барбершоп «Бородинский»<br>
+                    Адрес: г. Санкт-Петербург, б. Конюшенная, д. 19/8<br>
+                    Телефон: +7 (495) 666-02-66
                 </p>
-                <p class="appoitment__item">
-                    <label for="appoinment__time">Время</label>
-                    <input id="appoinment__time" name="time"  type="text" placeholder="10:00" value="">
-                </p>
-                <p class="appoitment__item"></p>
-                    <label for="appoinment__name">Ваше имя</label>
-                    <input id="appoinment__name" name="name"  type="text" placeholder="Ваше имя" value="">
-                </p>
-                <p class="appoitment__item"></p>
-                    <label for="appoinment__phone">Телефон</label>
-                    <input id="appoinment__phone" name="phone" type="tel" placeholder="+7 800 000-00-00" value="">
-                </p>                
-                <button class="button" type="submit">Отправить</button>
-            </form>
-        </section>
+                <p>Время работы:<br> 
+                    Пн—Пт: с 10:00 до 22:00<br>
+                    Сб—Вс: с 10:00 до 19:00
+                </p>            
+                <a class="button" href="map.html">Как проехать</a>
+                <a class="button" href="contacts.html">Обратная связь</a>
+            </section>
+    
+            <section class="appoinment"> <!-- Секция записаться -->
+                <h2>Записаться</h2>
+                <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+                <!-- Здесь будет форма -->
+                <form class="appoinment__form" action="#" method="POST">
+                    <p class="appoitment__item">
+                        <label for="appoinment__date">Дата</label>
+                        <input id="appoinment__date" name="date" type="text" placeholder="08.10.2017" value="">
+                    </p>
+                    <p class="appoitment__item">
+                        <label for="appoinment__time">Время</label>
+                        <input id="appoinment__time" name="time"  type="text" placeholder="10:00" value="">
+                    </p>
+                    <p class="appoitment__item">
+                        <label for="appoinment__name">Ваше имя</label>
+                        <input id="appoinment__name" name="name"  type="text" placeholder="Ваше имя" value="">
+                    </p>
+                    <p class="appoitment__item">
+                        <label for="appoinment__phone">Телефон</label>
+                        <input id="appoinment__phone" name="phone" type="tel" placeholder="+7 800 000-00-00" value="">
+                    </p>                
+                    <button class="button" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
     </main>
 
     <footer class="main-footer">
@@ -121,14 +127,14 @@
         <div class="footer-social">
             <b>ДАВАЙТЕ ДРУЖИТЬ!</b>
             <ul>
-                <li><a href="#"><img src="img/vk.svg" alt="В Контакте"></a></li>
-                <li><a href="#"><img src="img/facebook.svg" alt="Фейсбук"></a></li>
-                <li><a href="#"><img src="img/instagram.svg" alt="Инстаграмм"></a></li>
+                <li><a class="social-button" href="#"><img src="img/vk.svg" alt="В Контакте"></a></li>
+                <li><a class="social-button" href="#"><img src="img/facebook.svg" alt="Фейсбук"></a></li>
+                <li><a class="social-button" href="#"><img src="img/instagram.svg" alt="Инстаграмм"></a></li>
             </ul>
         </div>
         <p class="footer-copyright">
             <b>Разработано</b>
-            <a href="https://htmlacademy.ru/">Html academy</a>
+            <a class="button"  href="https://htmlacademy.ru/">Html academy</a>
         </p>
     </footer>
 
@@ -144,12 +150,12 @@
             </p>
             <p>
                 <label class="visually-hidden" for="user-passwords">Пароль</label>
-                <input class="ligon-icon-password" id="user-passwords" name="password" type="password" placeholder="Пароль">
+                <input class="login-icon-password" id="user-passwords" name="password" type="password" placeholder="Пароль">
                 <!-- <img src="img/lock.svg" alt="lock icon"> -->
             </p>
             <p class="login-passwords-info">
                 <input class="visually-hidden" name="remeber"" id="login-passwords-info" type="checkbox" >
-                <label for="login-passwords-info">
+                <label class="login-checkbox" for="login-passwords-info">
                     <span class="checkbox-indicator"></span>
                     Запомните меня
                 </label>
